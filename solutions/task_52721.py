@@ -16,13 +16,8 @@
 
 
 def solve(id: str) -> int:
-    """
-    Implement your task here.
-    Your id is passed as a string.
-    Return an integer.
-    """
-    pass
-
+    clean_id = id.replace("-ex", "").replace("_ex", "")
+    return sum(int(clean_id[i]) for i in [2, 3, 4])
 
 if __name__ == "__main__":
     print(solve("52721"))
