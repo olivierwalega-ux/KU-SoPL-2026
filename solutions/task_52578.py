@@ -21,7 +21,13 @@ def solve(id: str) -> int:
     Your id is passed as a string.
     Return an integer.
     """
-    pass
+    total_sum = 0
+    for char in id:
+        if char.isdigit():
+            digit = int(char)
+            if digit % 3 == 0:
+                total_sum += digit
+    return total_sum
 
 
 if __name__ == "__main__":
