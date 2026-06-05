@@ -16,12 +16,8 @@
 
 
 def solve(id: str) -> int:
-    """
-    Implement your task here.
-    Your id is passed as a string.
-    Return an integer.
-    """
-    pass
+    clean = id.replace("-ex", "").replace("_ex", "")
+    return sum(1 for ch in clean if ch in "05")
 
 
 if __name__ == "__main__":
